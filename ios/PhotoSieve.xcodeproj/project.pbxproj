@@ -1,0 +1,35 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		3C4D5BF81259353996C99C21 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+		9FF2EA8E94F5AE97E000DA72 = { isa = PBXBuildFile; fileRef = 3C4D5BF81259353996C99C21; };
+		40318EC0C0ADDD6AD27AA663 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EngineClient.swift"; sourceTree = "<group>"; };
+		51D97F38EB4DCE82049F62F3 = { isa = PBXBuildFile; fileRef = 40318EC0C0ADDD6AD27AA663; };
+		847FF043A17543099999B0C9 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoLibrary.swift"; sourceTree = "<group>"; };
+		2E331DCAF6BC43851295E7F7 = { isa = PBXBuildFile; fileRef = 847FF043A17543099999B0C9; };
+		5E71DCCB6AAD96E13F920F4D = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoSieveApp.swift"; sourceTree = "<group>"; };
+		B1A49464D65A3481AFD23860 = { isa = PBXBuildFile; fileRef = 5E71DCCB6AAD96E13F920F4D; };
+		2FF4A8280E31816D9F42E174 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScanViewModel.swift"; sourceTree = "<group>"; };
+		F245DF77085FB75367E71D2C = { isa = PBXBuildFile; fileRef = 2FF4A8280E31816D9F42E174; };
+		9AC3B5AD93CBC0305C62F78F = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A172CEDCAE47474B615C54D5 = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSieve.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D3B380B3DAA02544E7A4A3 = { isa = PBXGroup; children = (3C4D5BF81259353996C99C21, 40318EC0C0ADDD6AD27AA663, 847FF043A17543099999B0C9, 5E71DCCB6AAD96E13F920F4D, 2FF4A8280E31816D9F42E174, 9AC3B5AD93CBC0305C62F78F); path = PhotoSieve; sourceTree = "<group>"; };
+		0A3E27B8CA818264D75C8D81 = { isa = PBXGroup; children = (A172CEDCAE47474B615C54D5); name = Products; sourceTree = "<group>"; };
+		0035FE99EA2940F7FA633A58 = { isa = PBXGroup; children = (21D3B380B3DAA02544E7A4A3, 0A3E27B8CA818264D75C8D81); sourceTree = "<group>"; };
+		878A52FC5FF6A57D50B7B870 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (9FF2EA8E94F5AE97E000DA72, 51D97F38EB4DCE82049F62F3, 2E331DCAF6BC43851295E7F7, B1A49464D65A3481AFD23860, F245DF77085FB75367E71D2C); runOnlyForDeploymentPostprocessing = 0; };
+		E2AA269EB967A8853A258BFA = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		41D311A605520FC7B8B9A980 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		73EBF6644258C120893E685D = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Debug; };
+		6C7EFF6369083C8E1F2B1994 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = PhotoSieve/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = com.joshuasun.photosieve; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = 1; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; SWIFT_STRICT_CONCURRENCY = minimal; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; }; name = Debug; };
+		0B0C687DF8B6B8DC790B519C = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; }; name = Release; };
+		DD75E2CB1C510A828AC72D96 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = PhotoSieve/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = com.joshuasun.photosieve; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = 1; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; SWIFT_STRICT_CONCURRENCY = minimal; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_COMPILATION_MODE = wholemodule; }; name = Release; };
+		AAB2723FF2C8E6D1C298C1E4 = { isa = XCConfigurationList; buildConfigurations = (73EBF6644258C120893E685D, 0B0C687DF8B6B8DC790B519C); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		04229C262AC03CB8C1234C52 = { isa = XCConfigurationList; buildConfigurations = (6C7EFF6369083C8E1F2B1994, DD75E2CB1C510A828AC72D96); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		34A04005BCAF206EEC990BD9 = { isa = PBXNativeTarget; buildConfigurationList = 04229C262AC03CB8C1234C52; buildPhases = (878A52FC5FF6A57D50B7B870, E2AA269EB967A8853A258BFA, 41D311A605520FC7B8B9A980); buildRules = (); dependencies = (); name = PhotoSieve; productName = PhotoSieve; productReference = A172CEDCAE47474B615C54D5; productType = "com.apple.product-type.application"; };
+		244210E48437B6556980A702 = { isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = AAB2723FF2C8E6D1C298C1E4; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base); mainGroup = 0035FE99EA2940F7FA633A58; productRefGroup = 0A3E27B8CA818264D75C8D81; projectDirPath = ""; projectRoot = ""; targets = (34A04005BCAF206EEC990BD9); };
+	};
+	rootObject = 244210E48437B6556980A702;
+}
