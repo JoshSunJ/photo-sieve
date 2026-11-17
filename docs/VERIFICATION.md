@@ -9,10 +9,13 @@
 - Python source compilation and CLI help.
 - Dependency installation and `pip check`: no broken requirements.
 - Info.plist and Xcode project syntax validation with `plutil`.
+- Shared Xcode scheme XML validation and deterministic project regeneration.
 - Real CLIP inference on generated red/blue square images using CPU, including
   repeated cached inference and invalid-image rejection. Red ranked red above
   blue; blue ranked blue above red. This establishes basic inference wiring,
   **not** photo-cleanup accuracy.
+- End-to-end folder command on generated images: two images scored, one corrupt
+  image skipped, with HTML, JSON, and thumbnail outputs checked.
 - Git ignore checks for images, reports, local environment, and `.env`.
 
 Installed ML combination: macOS ARM64, Python 3.13, PyTorch 2.15.0,
@@ -35,9 +38,9 @@ No personal photo library was scanned or modified while building this repository
 
 The initial CLI credential can create the public repository and publish source,
 but GitHub rejected publishing a workflow because it lacks the `workflow` scope.
-The complete workflow is retained at `ci/checks.yml` while activation is attempted
-through the connected GitHub app. Until an active workflow run is recorded here,
-do not interpret the template as a passing CI result.
+The connected GitHub app also rejected workflow creation with HTTP 403
+(`Resource not accessible by integration`). The complete workflow is retained
+at `ci/checks.yml` and is **not active**. There is no passing CI run to report.
 
 If activation remains unavailable, enable it from GitHub's web editor by creating
 `.github/workflows/checks.yml` with the contents of `ci/checks.yml`, or authorize

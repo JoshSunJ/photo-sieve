@@ -7,7 +7,8 @@ Don't build every layer in isolation and hope they integrate at the end.
 ## Session 1 · Run code without touching your library
 
 1. Follow the README to activate `.venv` and install the engine.
-2. Run `make test`. These tests use a fake scorer, so they do not download a
+2. Run `make test` (or `PYTHONPATH=engine/src python -m unittest discover -s engine/tests -v`
+   if Xcode setup blocks Apple's `make`). These tests use a fake scorer, so they do not download a
    model or access your photos. Read `test_contracts.py` beside `contracts.py`.
 3. Place 10–20 disposable images in `data/inbox/`. Include desired matches and
    visually similar nonmatches: ramen, spaghetti, soup, menus, and screenshots.

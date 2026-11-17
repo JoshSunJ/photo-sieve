@@ -36,6 +36,8 @@ cd photo-sieve
 python3.13 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e './engine[dev]'
+export HF_HOME="$PWD/data/model-cache"
+export TORCH_HOME="$PWD/data/torch-cache"
 photosieve serve --host 0.0.0.0
 ```
 
@@ -140,6 +142,13 @@ model downloads nor private photos:
 ```bash
 make check
 .venv/bin/ruff check engine/src engine/tests
+```
+
+If Apple's `make` is blocked by Xcode setup, run the Python checks directly:
+
+```bash
+PYTHONPATH=engine/src python -m unittest discover -s engine/tests -v
+python -m compileall -q engine/src scripts
 ```
 
 Unsigned iOS build, after completing Xcode setup:
